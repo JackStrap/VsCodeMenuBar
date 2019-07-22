@@ -1,0 +1,152 @@
+{
+	"name": "somemenubar",
+	"displayName": "Some Menu Bar",
+	"description": "add item to menu bar",
+    "version": "0.0.3",
+    "publisher": "JackStrap",
+    "author": {
+        "name": "Jack Strapopoulos"
+    },
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.save",
+        "onCommand:extension.beautify",
+        "onCommand:extension.lineComment",
+        "onCommand:extension.blockComment",
+        "onCommand:extension.toggleTerminal"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+            {
+                "command": "extension.save",
+                "title": "Save",
+                "category": "menubar",
+                "icon": {
+                    "light": "images/save_light.svg",
+                    "dark": "images/save.svg"
+                }
+            },
+            {
+                "command": "extension.beautify",
+                "title": "Beautify",
+                "category": "menubar",
+                "icon": {
+                    "light": "images/format_light.svg",
+                    "dark": "images/format.svg"
+                }
+            },
+            {
+                "command": "extension.lineComment",
+                "title": "Toggle Line Comment",
+                "category": "menubar",
+                "icon": {
+                    "light": "images/commentDots_light.svg",
+                    "dark": "images/commentDots.svg"
+                }
+            },
+            {
+                "command": "extension.blockComment",
+                "title": "Toggle Block Comment",
+                "category": "menubar",
+                "icon": {
+                    "light": "images/commentEdit_light.svg",
+                    "dark": "images/commentEdit.svg"
+                }
+            },
+            {
+                "command": "extension.toggleTerminal",
+                "title": "Toggle terminal",
+                "category": "menubar",
+                "icon": {
+                    "light": "images/terminal_light.svg",
+                    "dark": "images/terminal.svg"
+                }
+            }
+		],
+		"configuration": [
+            {
+                "title": "Some Menu Bar configuration",
+                "properties": {
+                    "Save active file": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "show icon for save active file"
+                    },
+                    "Beautify active file": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "show icon for beautify active file"
+                    },
+                    "Toggle line comment": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "show icon for toggle line comment"
+                    },
+                    "Toggle block comment": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "show icon for toggle block comment"
+                    },
+                    "Toggle terminal": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "show icon for toggle terminal"
+                    }
+                }
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "!isInDiffEditor && !markdownPreviewFocus && config.Save active file",
+                    "command": "extension.save",
+                    "group": "navigation@1"
+                },
+                {
+                    "when": "!isInDiffEditor && !markdownPreviewFocus && config.Beautify active file",
+                    "command": "extension.beautify",
+                    "group": "navigation@2"
+                },
+                {
+                    "when": "config.Toggle line comment",
+                    "command": "extension.lineComment",
+                    "group": "navigation@3"
+                },
+                {
+                    "when": "config.Toggle block comment",
+                    "command": "extension.blockComment",
+                    "group": "navigation@4"
+                },
+                {
+                    "when": "config.Toggle terminal",
+                    "command": "extension.toggleTerminal",
+                    "group": "navigation@5"
+                }
+            ]
+        }
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.36.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.0-next.0"
+	}
+}

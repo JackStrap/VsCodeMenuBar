@@ -2,7 +2,7 @@
 	"name": "somemenubar",
 	"displayName": "Some Menu Bar",
 	"description": "add item to menu bar",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "JackStrap",
     "author": {
         "name": "Jack Strapopoulos"
@@ -46,8 +46,8 @@
                 "title": "Toggle Line Comment",
                 "category": "menubar",
                 "icon": {
-                    "light": "images/commentDots_light.svg",
-                    "dark": "images/commentDots.svg"
+                    "light": "images/commentL_light.svg",
+                    "dark": "images/commentL.svg"
                 }
             },
             {
@@ -55,8 +55,8 @@
                 "title": "Toggle Block Comment",
                 "category": "menubar",
                 "icon": {
-                    "light": "images/commentEdit_light.svg",
-                    "dark": "images/commentEdit.svg"
+                    "light": "images/commentB_light.svg",
+                    "dark": "images/commentB.svg"
                 }
             },
             {

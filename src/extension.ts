@@ -16,39 +16,40 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	let disposableCmdsArr: vscode.Disposable[] = [];
 	let commandArray = [
-        ["extension.save", "workbench.action.files.save"],
-        ["extension.lineComment", "editor.action.commentLine"],
-        ["extension.blockComment", "editor.action.blockComment"],
-        ["extension.toggleTerminal", "workbench.action.terminal.toggleTerminal"]
-    ];
+		["extension.save", "workbench.action.files.save"],
+		["extension.lineComment", "editor.action.commentLine"],
+		["extension.blockComment", "editor.action.blockComment"],
+		["extension.toggleTerminal", "workbench.action.terminal.toggleTerminal"]
+	];
 
 	commandArray.forEach(command => {
-
-        disposableCmdsArr.push(vscode.commands.registerCommand(command[0], () => {
-            vscode.commands.executeCommand(command[1]).then(function () {});
-        }));
+		disposableCmdsArr.push(
+			vscode.commands.registerCommand(command[0], () => {
+				vscode.commands.executeCommand(command[1]).then(function () { });
+			})
+		);
 	});
-	
+
 	let disposableBeautify = vscode.commands.registerCommand('extension.beautify', () => {
 
-        let editor = vscode.window.activeTextEditor;
-        if (!editor) {
-            return; // No open text editor
-        }
-        
-        if (vscode.window.state.focused === true && !editor.selection.isEmpty) {
-            vscode.commands.executeCommand('editor.action.formatSelection').then(function () {});
-        } else {
-            vscode.commands.executeCommand('editor.action.formatDocument').then(function () {});
-        }
+		let editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return; // No open text editor
+		}
+
+		if (vscode.window.state.focused === true && !editor.selection.isEmpty) {
+			vscode.commands.executeCommand('editor.action.formatSelection').then(function () { });
+		} else {
+			vscode.commands.executeCommand('editor.action.formatDocument').then(function () { });
+		}
 	});
-	
+
 	// Add to a list of disposables which are disposed when this extension is deactivated.
-    context.subscriptions.push(disposableBeautify);
-    disposableCmdsArr.forEach(i => {
-        context.subscriptions.push(i);
-    });
+	context.subscriptions.push(disposableBeautify);
+	disposableCmdsArr.forEach(i => {
+		context.subscriptions.push(i);
+	});
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

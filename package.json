@@ -2,7 +2,7 @@
   "name": "somemenubar",
   "displayName": "Some Menu Bar",
   "description": "add item to menu bar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "JackStrap",
   "author": {
     "name": "Jack Strapopoulos"
@@ -10,6 +10,7 @@
   "engines": {
     "vscode": "^1.36.0"
   },
+  "icon": "images/HomerSlayer.png",
   "categories": [
     "Other"
   ],

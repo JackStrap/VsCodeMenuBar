@@ -1,8 +1,8 @@
 {
   "name": "somemenubar",
   "displayName": "Some Menu Bar",
-  "description": "add item to menu bar",
-  "version": "0.0.5",
+  "description": "A sort of toolbar, add items to the menu bar.",
+  "version": "0.0.6",
   "publisher": "JackStrap",
   "author": {
     "name": "Jack Strapopoulos"
@@ -11,6 +11,10 @@
     "vscode": "^1.36.0"
   },
   "icon": "images/HomerSlayer.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackStrap/VsCodeMenuBar.git"
+  },
   "categories": [
     "Other"
   ],
@@ -47,8 +51,8 @@
         "title": "Toggle Line Comment",
         "category": "menubar",
         "icon": {
-          "light": "images/commentL_light.svg",
-          "dark": "images/commentL.svg"
+          "light": "images/commentLine_light.svg",
+          "dark": "images/commentLine.svg"
         }
       },
       {
@@ -56,8 +60,8 @@
         "title": "Toggle Block Comment",
         "category": "menubar",
         "icon": {
-          "light": "images/commentB_light.svg",
-          "dark": "images/commentB.svg"
+          "light": "images/commentBlock_light.svg",
+          "dark": "images/commentBlock.svg"
         }
       },
       {

@@ -1,20 +1,21 @@
-# somemenubar VSCode Extension
+# Some MenuBar VSCode Extension
 
-Show buttons like beautify, list files, save, toggle terminal,activity bar etc to the editor menu bar in the Visual Studio Code.
-User may request additonal buttons by creating a github issue in below link.
+A sort of toolbar for Visual Studio Code.
+<br />
+It's base on [JerryGoyal project](https://github.com/JerryGoyal/Shortcut-Menu-Bar-VSCode-Extension), thanks Jerry!
+
 
 ## Features
+Show buttons like beautify, save, toggle comment, toggle terminal etc to the editor menu bar in the Visual Studio Code.
 
-# Some Menu Bar VSCode Extension
-Show buttons like beautify, list files, save, toggle terminal,activity bar etc to the editor menu bar in the Visual Studio Code.
-User may request additonal buttons by creating a github issue in below link.
-<!-- 
 ## Requirements
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+## [Extension API - Overview](https://code.visualstudio.com/api)
 
+
+## Extension Settings 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
 For example:
@@ -24,10 +25,13 @@ This extension contributes the following settings:
 * `myExtension.enable`: enable/disable this extension
 * `myExtension.thing`: set to `blah` to do something
 
-## Known Issues
+Build / Compile
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
- -->
+* `npm run compile`
+* `vsce package`
+* `code --install-extension somemenubar-0.0.1.vsix`
+-----------------------------------------------------------------------------------------------------------
+
 ## Release Notes
 
 ### 0.0.3
@@ -39,14 +43,10 @@ remove item from menu bar
 ### 0.0.1
 
 Initial release of someMenuBar
+<br /><br /><br />
 
 -----------------------------------------------------------------------------------------------------------
 
-<!--
-npm run compile
-vsce package
-code --install-extension somemenubar-0.0.1.vsix
------------------------------------------------------------------------------------------------------------
 ## Working with Markdown
 
 **Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
@@ -61,4 +61,4 @@ code --install-extension somemenubar-0.0.1.vsix
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
--->
+

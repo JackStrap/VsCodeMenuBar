@@ -1,21 +1,23 @@
-# Some MenuBar VSCode Extension
+# vscodemenubar README
 
 A sort of toolbar for Visual Studio Code.
 <br />
 It's base on [JerryGoyal project](https://github.com/JerryGoyal/Shortcut-Menu-Bar-VSCode-Extension), thanks Jerry!
 
-
 ## Features
+
 Show buttons like beautify, save, toggle comment, toggle terminal etc to the editor menu bar in the Visual Studio Code.
+
+For example:
+
+![vscodemenubar](images/vsCodeMenuBar.png)
 
 ## Requirements
 
 If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## [Extension API - Overview](https://code.visualstudio.com/api)
+## Extension Settings
 
-
-## Extension Settings 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
 For example:
@@ -25,12 +27,16 @@ This extension contributes the following settings:
 * `myExtension.enable`: enable/disable this extension
 * `myExtension.thing`: set to `blah` to do something
 
-Build / Compile
+> Build / Compile
+> * `npm run compile`
+> * `vsce package`
+> * `code --install-extension somemenubar-0.0.1.vsix`
+---
+<br/>
 
-* `npm run compile`
-* `vsce package`
-* `code --install-extension somemenubar-0.0.1.vsix`
------------------------------------------------------------------------------------------------------------
+## Known Issues
+
+Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
@@ -43,9 +49,15 @@ remove item from menu bar
 ### 0.0.1
 
 Initial release of someMenuBar
-<br /><br /><br />
 
------------------------------------------------------------------------------------------------------------
+---
+<br/>
+
+## Following extension guidelines
+
+Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
 ## Working with Markdown
 
@@ -61,4 +73,3 @@ Initial release of someMenuBar
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
-

@@ -10,7 +10,7 @@ Show buttons like beautify, save, toggle comment, toggle terminal etc to the edi
 
 For example:
 
-![vscodemenubar](images/vsCodeMenuBar.png)
+![vscodemenubar](./images/vsCodeMenuBar.png)
 
 ## Requirements
 
@@ -39,6 +39,9 @@ This extension contributes the following settings:
 Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
+
+### 0.0.7
+add Save All button
 
 ### 0.0.3
 rename in code

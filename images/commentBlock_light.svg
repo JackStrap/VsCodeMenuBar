@@ -1,3 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="292.1578947368421 273.2105263157894 34.01666259765625 47" width="30.02" height="43"><defs><text id="b1dNBo8qfr" x="293.16" y="274.21" font-size="32" font-family="Open Sans" font-weight="600" font-style="normal" letter-spacing="0" alignment-baseline="before-edge" transform="matrix(1 0 0 1 0 0)" style="line-height:100%" xml:space="preserve" dominant-baseline="text-before-edge"><tspan x="293.16" dy="0em" alignment-baseline="before-edge" dominant-baseline="text-before-edge" text-anchor="start">/*</tspan></text></defs><g><g id="bBQ16c3jE"><use xlink:href="#b1dNBo8qfr" opacity="1" fill="#8c8c8c" fill-opacity="1"></use></g></g></svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	preserveAspectRatio="xMidYMid meet" viewBox="292 273 29 47" width="16" height="16">
+	<defs>
+		<text id="a2uHlClFNS" x="294" y="275" font-size="36" font-weight="600" dominant-baseline="text-before-edge">
+			<tspan x="294" dy="0em" text-anchor="start">/*</tspan>
+		</text>
+	</defs>
+	<g id="a2xIN2qkU"><use xlink:href="#a2uHlClFNS" opacity="1" fill="#8c8c8c" fill-opacity="1"></use></g>
+</svg>

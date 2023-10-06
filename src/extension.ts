@@ -13,16 +13,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-
-	// let disposable = vscode.commands.registerCommand('vscodemenubar.helloWorld', () => {
-	// 	// The code you place here will be executed every time your command is executed
-	// 	// Display a message box to the user
-	// 	vscode.window.showInformationMessage('Hello World from vsCodeMenuBar!');
-	// });
-	// context.subscriptions.push(disposable);
-
-	let disposableCmdsArr: vscode.Disposable[] = [];
-	let commandArray = [
+	const disposableCmdsArr: vscode.Disposable[] = [];
+	const commandArray = [
 		["extension.save", "workbench.action.files.save"],
 		["extension.saveAll", "saveAll"],
 		["extension.lineComment", "editor.action.commentLine"],
@@ -33,22 +25,22 @@ export function activate(context: vscode.ExtensionContext) {
 	commandArray.forEach(command => {
 		disposableCmdsArr.push(
 			vscode.commands.registerCommand(command[0], () => {
-				vscode.commands.executeCommand(command[1]).then(function () { });
+				vscode.commands.executeCommand(command[1]).then(() => { });
 			})
 		);
 	});
 
-	let disposableBeautify = vscode.commands.registerCommand('extension.beautify', () => {
-
-		let editor = vscode.window.activeTextEditor;
+	const disposableBeautify = vscode.commands.registerCommand('extension.beautify', () => {
+		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
 			return; // No open text editor
 		}
 
 		if (vscode.window.state.focused === true && !editor.selection.isEmpty) {
-			vscode.commands.executeCommand('editor.action.formatSelection').then(function () { });
-		} else {
-			vscode.commands.executeCommand('editor.action.formatDocument').then(function () { });
+			vscode.commands.executeCommand('editor.action.formatSelection').then(() => { });
+		}
+		else {
+			vscode.commands.executeCommand('editor.action.formatDocument').then(() => { });
 		}
 	});
 

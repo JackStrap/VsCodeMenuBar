@@ -18,7 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
 		["extension.save", "workbench.action.files.save"],
 		["extension.saveAll", "saveAll"],
 		["extension.lineComment", "editor.action.commentLine"],
-		["extension.blockComment", "editor.action.blockComment"],
 		["extension.toggleTerminal", "workbench.action.terminal.toggleTerminal"]
 	];
 

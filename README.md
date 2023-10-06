@@ -14,7 +14,8 @@ For example:
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+> * `npm install -g generator-code`  
+> * `npm install -g @vscode/vsce`
 
 ## Extension Settings
 
@@ -86,7 +87,12 @@ Ensure that you've read through the extensions guidelines and follow the best pr
           "dark": "images/format.svg"
         }
       },
-			"$(bracket)"
+      {
+        "command": "extension.beautify",
+        "title": "Beautify",
+        "category": "menubar",
+        "icon": "$(bracket)"
+      },
 
       {
         "command": "extension.toggleTerminal",
@@ -98,53 +104,3 @@ Ensure that you've read through the extensions guidelines and follow the best pr
         }
       }
 terminal-powershell
-
-
-npm install -g @vscode/vsce
-
-```xml
-<svg
-	version="1.1"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	preserveAspectRatio="xMidYMid meet"
-	viewBox="0 0 29 47"
-	width="16" height="16"
->
-	<defs>
-		<text
-			id="a2uHlClFNS"
-			font-size="36"
-			font-weight="600"
-			dominant-baseline="text-before-edge"
-		>
-			<tspan text-anchor="start">//</tspan>
-		</text>
-	</defs>
-	<g id="a2xIN2qkU">
-		<use xlink:href="#a2uHlClFNS" opacity="1" fill="#8c8c8c" fill-opacity="1"></use>
-	</g>
-</svg>
-```
-
-
-			data-original="#000000"
-			data-old_color="#0F00FF"
-			style="fill:#424242"
-
-
-			
-			data-original="#000000"
-			data-old_color="#0F00FF"
-			style="fill:#424242"
-
-
-			class="active-path"
-			data-original="#000000"
-			data-old_color="#0F00FF"
-			style="fill:#e5e5e5"
-			
-			class="active-path"
-			data-original="#000000"
-			data-old_color="#0F00FF"
-			style="fill:#e5e5e5"

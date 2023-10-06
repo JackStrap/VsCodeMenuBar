@@ -23,7 +23,6 @@
     "onCommand:extension.saveAll",
     "onCommand:extension.beautify",
     "onCommand:extension.lineComment",
-    "onCommand:extension.blockComment",
     "onCommand:extension.toggleTerminal"
   ],
   "main": "./out/extension.js",
@@ -45,7 +44,10 @@
         "command": "extension.beautify",
         "title": "Beautify",
         "category": "menubar",
-        "icon": "$(bracket)"
+        "icon": {
+          "light": "images/format_light.svg",
+          "dark": "images/format.svg"
+        }
       },
       {
         "command": "extension.lineComment",
@@ -54,15 +56,6 @@
         "icon": {
           "light": "images/commentLine_light.svg",
           "dark": "images/commentLine.svg"
-        }
-      },
-      {
-        "command": "extension.blockComment",
-        "title": "Toggle Block Comment",
-        "category": "menubar",
-        "icon": {
-          "light": "images/commentBlock_light.svg",
-          "dark": "images/commentBlock.svg"
         }
       },
       {
@@ -96,11 +89,6 @@
             "default": true,
             "description": "show icon for toggle line comment"
           },
-          "extension.blockComment": {
-            "type": "boolean",
-            "default": true,
-            "description": "show icon for toggle block comment"
-          },
           "extension.toggleTerminal": {
             "type": "boolean",
             "default": false,
@@ -132,14 +120,9 @@
           "group": "navigation@4"
         },
         {
-          "when": "config.extension.blockComment",
-          "command": "extension.blockComment",
-          "group": "navigation@5"
-        },
-        {
           "when": "config.extension.toggleTerminal",
           "command": "extension.toggleTerminal",
-          "group": "navigation@6"
+          "group": "navigation@5"
         }
       ]
     }

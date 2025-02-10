@@ -1,16 +1,16 @@
 {
-  "name": "somemenubar",
-  "displayName": "Some Menu Bar",
+  "name": "jackmenubar",
+  "displayName": "Jack's Menu Bar",
   "description": "A sort of toolbar, add items to the menu bar.",
-  "version": "0.0.8",
+  "version": "0.0.5",
   "publisher": "JackStrap",
   "author": {
     "name": "Jack Strapopoulos"
   },
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.97.0"
   },
-  "icon": "images/HomerSlayer.png",
+  "icon": "images/JackMenuBar.jpg",
   "repository": {
     "type": "git",
     "url": "https://github.com/JackStrap/VsCodeMenuBar.git"
@@ -102,27 +102,27 @@
         {
           "when": "!isInDiffEditor && !markdownPreviewFocus && config.extension.save",
           "command": "extension.save",
-          "group": "navigation@1"
+          "group": "navigation@2"
         },
         {
           "when": "!isInDiffEditor && !markdownPreviewFocus && config.extension.saveAll",
           "command": "extension.saveAll",
-          "group": "navigation@2"
+          "group": "navigation@3"
         },
         {
           "when": "!isInDiffEditor && !markdownPreviewFocus && config.extension.beautify",
           "command": "extension.beautify",
-          "group": "navigation@3"
+          "group": "navigation@4"
         },
         {
           "when": "config.extension.lineComment",
           "command": "extension.lineComment",
-          "group": "navigation@4"
+          "group": "navigation@5"
         },
         {
           "when": "config.extension.toggleTerminal",
           "command": "extension.toggleTerminal",
-          "group": "navigation@5"
+          "group": "navigation@6"
         }
       ]
     }
@@ -132,18 +132,18 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src",
+    "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
-    "@types/mocha": "^10.0.2",
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
     "@types/node": "18.x",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "eslint": "^8.50.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
-    "@vscode/test-electron": "^2.3.4"
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
   }
 }

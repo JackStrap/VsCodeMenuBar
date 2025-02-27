@@ -1,22 +1,25 @@
 # jackmenubar README
 
+This is the xREADMEx for your extension "Jack's Menu Bar". After writing up a brief description, we recommend including the following sections.
+
 A sort of toolbar for Visual Studio Code.
 <br />
 It's base on [JerryGoyal project](https://github.com/JerryGoyal/Shortcut-Menu-Bar-VSCode-Extension), thanks Jerry!
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Show buttons like beautify, save, toggle comment, toggle terminal etc to the editor menu bar in the Visual Studio Code.
 
 For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+![vscodemenubar](images/vsCodeMenuBar.png)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+> * `npm install -g generator-code`  
+> * `npm install -g @vscode/vsce`
 
 ## Extension Settings
 
@@ -28,13 +31,14 @@ This extension contributes the following settings:
 
 * `myExtension.enable`: Enable/disable this extension.
 * `myExtension.thing`: Set to `blah` to do something.
+---
 
-> Build / Compile
+## Build / Compile
 > * `npm run compile`
 > * `vsce package`
-> * `code --install-extension jackmenubar-0.0.1.vsix`
+> * `code --install-extension jackmenubar-0.0.5.vsix`
 ---
-<br/>
+
 
 ## Known Issues
 
@@ -44,21 +48,9 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 Users appreciate release notes as you update your extension.
 
-### 0.0.5
+### 0.1.0
 
 Start rendering button at the second group navigation.
-
-### 0.0.4
-
-Add Save All button.
-
-### 0.0.3
-
-Rename in code.
-
-### 0.0.2
-
-Remove item from menu bar.
 
 ### 0.0.1
 

@@ -2,7 +2,7 @@
   "name": "jackmenubar",
   "displayName": "Jack's Menu Bar",
   "description": "A sort of toolbar, add items to the menu bar.",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "publisher": "JackStrap",
   "author": {
     "name": "Jack Strapopoulos"
@@ -42,12 +42,9 @@
       },
       {
         "command": "extension.beautify",
-        "title": "Beautify",
+        "title": "Beautify--json--symbol-object--bracket",
         "category": "menubar",
-        "icon": {
-          "light": "images/format_light.svg",
-          "dark": "images/format.svg"
-        }
+        "icon": "$(json)"
       },
       {
         "command": "extension.lineComment",
@@ -63,6 +60,12 @@
         "title": "Toggle terminal",
         "category": "menubar",
         "icon": "$(terminal-view-icon)"
+      },
+      {
+        "command": "extension.showCommands",
+        "title": "Open command pallet",
+        "category": "menubar",
+        "icon": "$(symbol-color)"
       }
     ],
     "configuration": [
@@ -93,6 +96,11 @@
             "type": "boolean",
             "default": false,
             "description": "show icon for toggle terminal"
+          },
+          "extension.showCommands": {
+            "type": "boolean",
+            "default": false,
+            "description": "show icon for 'Open command pallet / Show all commands'"
           }
         }
       }
@@ -123,6 +131,11 @@
           "when": "config.extension.toggleTerminal",
           "command": "extension.toggleTerminal",
           "group": "navigation@6"
+        },
+        {
+          "when": "config.extension.showCommands",
+          "command": "extension.showCommands",
+          "group": "navigation@7"
         }
       ]
     }
